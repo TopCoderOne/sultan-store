@@ -1,0 +1,69 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        color: #3F4E65;
+        border-bottom: 2px solid transparent;
+        transition: border-color .2s linear;
+    
+        &:hover {
+            border-color: #3F4E65;
+        }
+    }
+}
+
+.contacts {
+    display: flex;
+    gap: 40px;
+}
+
+.address,
+.email {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &>p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: #111111;
+        margin-left: 15px;
+
+        &>span {
+            display: block;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 15px;
+            color: #3F4E65;
+        }
+    }
+}
+
+.line29,
+.line39 {
+    border-right: 1px dashed #dadde1;
+}
+
+.line29 {
+    height: 29px;
+}
+
+.line39 {
+    height: 39px;
+}

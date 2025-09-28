@@ -1,0 +1,144 @@
+.basketPage {
+    padding: 45px 100px;
+
+    .basketPage_wrapper {
+        &>h1 {
+            color: rgba(17, 17, 17, 1);
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 120%;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.basket_list {
+    border-top: 1px dashed transparent;
+    border-bottom: 1px dashed transparent;
+    border-color: rgba(63, 78, 101, 0.3);
+    padding: 50px 0;
+}
+
+.card {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .card_img {
+        max-width: 281px;
+        height: 191px;
+    }
+
+    .card_info {
+        max-width: 480px;
+
+        &>span {
+            display: inline-block;
+            color: rgba(63, 78, 101, 1);
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+            margin-bottom: 10px;
+        }
+
+        &>h2 {
+            color: rgba(17, 17, 17, 1);
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+
+        &>p {
+            color: rgba(63, 78, 101, 1);
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 150%;
+        }
+    }
+
+    &>.card_sum {
+        color: rgba(17, 17, 17, 1);
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 130%;
+        border-left: 1px dashed rgba(63, 78, 101, 0.2);
+        border-right: 1px dashed rgba(63, 78, 101, 0.2);
+        padding: 0 44px;
+    }
+}
+
+.counter {
+    color: rgba(63, 78, 101, 1);
+
+    .count {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+    }
+
+    .decrement_btn,
+    .increment_btn {
+        background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        width: 34px;
+        height: 23px;
+        border-radius: 1000px;
+        padding: 4px 14px;
+        cursor: pointer;
+    }
+
+    .decrement_btn {
+        margin-right: 17px;
+    }
+
+    .increment_btn {
+        margin-left: 17px;
+    }
+}
+
+.checkbox_container>span {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#checkbox {
+    appearance: none;
+    background-color: #ffffff;
+    width: 40px;
+    height: 24px;
+    border: 1px solid #b1b1b1;
+    border-radius: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.checkbox::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border: 1px solid #b1b1b1;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.checkbox.active {
+   background-color: #04de04;
+}
+
+.checkbox.active::after {
+    transform: translateX(90%);
+}

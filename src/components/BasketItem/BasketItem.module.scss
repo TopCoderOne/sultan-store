@@ -1,0 +1,67 @@
+.basket {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.basket_counter_block {
+    position: relative;
+    width: 46px;
+
+    @media screen and (max-width: 500px) {
+        width: 35px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.basket_counter {
+    background-color: #FFC85E;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 22px;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: -9px;
+    right: -5px;
+
+    @media screen and (max-width: 500px) {
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+        line-height: 16px;
+        top: -5px;
+        right: -3px;
+    }
+}
+
+.basket_info_block {
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
+}
+
+.basket_text {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #3F4E65;
+}
+
+.basket_total {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    white-space: nowrap;
+    color: #111111;
+}

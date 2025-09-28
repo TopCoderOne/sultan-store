@@ -1,0 +1,10 @@
+.carousel {
+    display: flex;
+    background-color: red;
+    &__item {
+        & > img {
+            height: 77px;
+            width: auto;
+        }
+    }
+}

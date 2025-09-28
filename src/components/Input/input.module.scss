@@ -1,0 +1,38 @@
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: #FFFFFF;
+    // background-color: #EDEDED;
+    border-radius: 36px;
+    padding: 13px 10px 13px 20px;
+
+    &>input {
+        font-weight: 700;
+        font-size: 15px;
+        color: #5C6370;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #5C6370;
+        }
+    }
+
+    &>button {
+        width: 39px;
+        height: 39px;
+        background-color: #ffc85e;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &>img {
+            margin: 0 auto;
+        }
+
+        &:hover {
+            background-color: #f5a400;
+        }
+    }
+}

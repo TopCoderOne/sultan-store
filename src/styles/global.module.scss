@@ -1,0 +1,116 @@
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding-bottom: 100px;
+
+    &__header {
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 320px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        color: #111111;
+        margin-bottom: 15px;
+
+        &>span {
+            font-weight: 800;
+            color: #FFC85E;
+        }
+
+        @media screen and (max-width: 320px) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 20px;
+        color: #3F4E65;
+
+        @media screen and (max-width: 320px) {
+            font-size: 14px;
+            max-width: 165px;
+        }
+    }
+}
+
+.main-button-style {
+    color: #FFFFFF;
+    background-color: #FFC85E;
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 80px;
+    transition: background-color 0.3s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #04da00;
+    }
+}
+
+.main-input-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 36px;
+    padding: 13px 10px 13px 20px;
+
+    &>input {
+        font-weight: 700;
+        font-size: 15px;
+        color: #5C6370;
+    
+        &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #5C6370;
+        }
+    }
+
+    &>button {
+        width: 39px;
+        height: 39px;
+        background-color: #ffc85e;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &>img {
+            margin: 0 auto;
+        }
+
+        &:hover {
+            background-color: #f5a400;
+        }
+    }
+}
+
+.input-bg-light-gray {
+    background-color: #EDEDED;
+}
+
+.iconBackground {
+    background-color: rgba(255, 200, 94, 1);
+    width: 59px;
+    height: 59px;
+    border-radius: 79px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
