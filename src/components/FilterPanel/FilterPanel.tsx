@@ -1,5 +1,7 @@
 import Input from "../Input/Input";
-import styles from "./filterPanel.module.scss";
+import styles from "./FilterPanel.module.scss";
+import database from "../../../public/database.json"
+import Image from 'next/image';
 import AirWick from "../../../public/images/logos/AirWick-logo.png";
 import CamayFrance from "../../../public/images/logos/CamayFrance-logo.png";
 import CottonClub from "../../../public/images/logos/CottonClub-logo.png";
@@ -10,154 +12,76 @@ import NC from "../../../public/images/logos/NC-logo.png";
 import NEFIS from "../../../public/images/logos/NEFIS-logo.png";
 import Nivea from "../../../public/images/logos/Nivea-logo.png";
 import Siberian from "../../../public/images/logos/Siberian-logo.png";
-import Image from 'next/image';
-
-const manufacturersList = [
-    "Grifon",
-    "Boyscout",
-    "Paclan"
-];
-
-const brandsList = [
-    "Nivea",
-    "GRIFON",
-    "Домашний сундук",
-    "HELP"
-];
-
-const categoriesList = [
-    {
-        category: "Уход за телом",
-        options: [
-            "Эпиляция и депиляция",
-            "Средства для ванны и душа",
-            "Скрабы, пилинги и пр.",
-            "Мочалки и губки для тела",
-            "Кремы, лосьоны, масла",
-            "Интимный уход",
-            "Дезодоранты, антиперспиранты",
-            "Гели для душа"
-        ]
-    },
-    {
-        category: "Уход за руками",
-        options: [
-            "Увлажнение и питание",
-            "Средства для ногтей",
-            "Мыло твердое",
-            "Мыло жидкое",
-            "Крем для рук",
-            "Защита рук",
-            "Жидкость для снятия лака"
-        ]
-    },
-    {
-        category: "Уход за ногами",
-        options: [
-            "Скрабы, пилинги",
-            "Пилки, ролики",
-            "Крем для ног",
-            "Дезодоранты для ног"
-        ]
-    },
-    {
-        category: "Уход за лицом",
-        options: [
-            "Тональные средства",
-            "Средства для снятия макияжа",
-            "Средства для очищения",
-            "Маски, скрабы, сыворотки",
-            "Крем для лица",
-            "Крем для век",
-            "Жидкость для снятия макияжа",
-            "Гигиеническая помада"
-        ]
-    },
-    {
-        category: "Уход за волосами",
-        options: [
-            "Шампуни",
-            "Средства для укладки",
-            "Средства для окрашивания волос",
-            "Маски, сыворотки, масла",
-            "Кондиционеры, бальзамы"
-        ]
-    },
-    {
-        category: "Средства для загара",
-        options: [
-            "Средства после загара"
-        ]
-    },
-    {
-        category: "Средства для бритья",
-        options: [
-            "Станки и кассеты",
-            "После бритья",
-            "Для бритья"
-        ]
-    },
-    {
-        category: "Подарочные наборы",
-        options: [
-            "Для мужчин",
-            "Для женщин"
-        ]
-    },
-];
+import SearchIcon from "../../../public/icons/magnifying-glass.svg";
+import TrashCanIcon from "../../../public/icons/fluent_delete-16-filled.svg";
 
 const FilterPanel = () => {
     return (
-        <aside className={styles.filter_panel}>
+        <aside className={styles.filterPanel}>
             <h3 className={styles.title}>ПОДБОР ПО ПАРАМЕТРАМ</h3>
             <p className={styles.price}>Цена&nbsp;<span>₸</span></p>
             <div className={styles.counter}>
-                <input type="text" name="input-counter-from" title="От" value={0} />&nbsp;&nbsp;-&nbsp;&nbsp;
-                <input type="text" name="input-counter-to" title="До" value={1000} />
+                <input type="number" name="input-counter-from" title="От" />
+                <span>-</span>
+                <input type="number" name="input-counter-to" title="До" value={1000} />
             </div>
-            <div className={styles.search_lock}>
-                <label htmlFor="manufacturer_search">Производитель</label>
+            <div className={styles.manufacturer_search_block}>
+                <label className={styles.inputLabel} htmlFor="manufacturer-search">Производитель</label>
                 <Input
-                    id="manufacturer_search"
+                    id="manufacturer-search"
                     type="search"
-                    name="manufacturer_search"
+                    name="manufacturer-search"
                     placeholder="Поиск..."
+                    className="input-bg-light-gray"
                     buttonType="submit"
-                    buttonTitle="Поиск" />
+                    buttonTitle="Поиск"
+                    buttonIcon={SearchIcon}
+                />
+                <ul className={styles.list}>
+                    {
+                        database.manufacturers.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <input type="checkbox" title="Выбрать" /> <span>{item}</span>&nbsp;<span>(56)</span>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
             </div>
-            <ul className={styles.list}>
-                {
-                    manufacturersList.map((item, index) =>
-                        <li key={index}>
-                            <input type="checkbox" title="Выбрать" />
-                            &nbsp;<span>{item}</span>&nbsp;<span>(56)</span>
-                        </li>)
-                }
-            </ul>
-            <div className={styles.search_block}>
-                <label htmlFor="brand_search">Бренд</label>
+            <div className={styles.brand_search_block}>
+                <label className={styles.inputLabel} htmlFor="brand-search">Бренд</label>
                 <Input
-                    id="brand_search"
+                    id="brand-search"
                     type="search"
-                    name="brand_search"
+                    name="brand-search"
                     placeholder="Поиск..."
+                    className="main-input-style input-bg-light-gray"
                     buttonType="submit"
-                    buttonTitle="Поиск" />
+                    buttonTitle="Поиск"
+                    buttonIcon={SearchIcon}
+                />
+                <ul className={styles.list}>
+                    {
+                        database.brands.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <input type="checkbox" title="Выбрать" />&nbsp;<span>{item}</span>&nbsp;<span>(56)</span>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+                <div className={styles.buttonsWrapper}>
+                    <button type="button">Показать</button>
+                    <button type="button" title="Сбросить фильтр"><TrashCanIcon /></button>
+                </div>
             </div>
-            <div className={styles.wrapper}>
-
-            </div>
-            <ul className={styles.list}>
-                {
-                    brandsList.map((item, index) =>
-                        <li key={index}><span>{item}</span> <span>(56)</span></li>)
-                }
-            </ul>
             {
-                categoriesList.map((item, index) => {
+                database.productType.map((item, index) => {
                     return (
                         <>
-                            <h3 className={styles.title} key={index}>{item.category}</h3>
+                            <h3 className={styles.title} key={index}>{item.title}</h3>
                             <ul className={styles.list} key={index}>
                                 {item.options.map((item, index) => <li key={index}>{item}</li>)}
                             </ul>

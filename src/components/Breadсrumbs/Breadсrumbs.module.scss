@@ -1,0 +1,20 @@
+.breadcrumbs {
+    padding: 45px 0 50px;
+
+    &>a {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 120%;
+        color: rgba(63, 78, 101, 1);
+
+        &:first-child {
+            padding-right: 10px;
+        }
+
+        &:not(:first-child) {
+            color: rgba(63, 78, 101, 0.3);
+            border-left: 1px dashed rgba(63, 78, 101, 0.3);
+            padding-left: 10px;
+        }
+    }
+}

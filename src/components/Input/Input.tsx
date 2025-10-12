@@ -1,36 +1,32 @@
-import { SVGProps } from "react";
-import Image from "next/image";
-import styles from "./input.module.scss";
-import global from "../../styles/global.module.scss";
-import ma from "../../../public/icons/magnifying-glass.svg";
+import { ComponentType, SVGProps } from "react";
+import styles from "./Input.module.scss";
 
 interface InputProps {
     id?: string;
-    type?: string;
+    type?: "text" | "search" | "email";
     name?: string;
     placeholder?: string;
     className?: string;
-    inputBackground?: string;
     buttonType?: "button" | "reset" | "submit";
     buttonTitle?: string;
-    buttonIcon?: SVGProps<SVGSVGElement>;
+    buttonIcon?: ComponentType<SVGProps<SVGSVGElement>>;
+    handleFunction?: () => void;
 }
 
 const Input = ({
-    id = "",
+    id,
     type,
-    name = "",
-    placeholder = "",
-    className = "",
-    inputBackground,
+    name,
+    placeholder,
+    className,
     buttonType,
     buttonTitle,
     buttonIcon: ButtonIcon }: InputProps) => {
     return (
-        <div className={`${className} ${styles.input} ${inputBackground}`}>
+        <div className={`${styles.input} ${className}`}>
             <input id={id} type={type} name={name} placeholder={placeholder} />
             <button type={buttonType} title={buttonTitle}>
-                {/* <Image src={ } alt="" /> */}
+                {ButtonIcon && <ButtonIcon />}
             </button>
         </div>
     );

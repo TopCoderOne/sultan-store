@@ -1,12 +1,13 @@
 "use client"
 import MainDestop from './Sections/Main/Desktop/MainDesktop';
 import MainMobile from './Sections/Main/Mobile/MainMobile';
-// import CarouselCompound from '../../components/Carousel-compound/SimpleSlider'
 import ProductCategories from './Sections/ProductCategories/ProductCategories';
 import PromotionalProducts from './Sections/PromotionalProducts/PromotionalProducts';
 import { useMediaQuery } from 'react-responsive';
-// import styles from '../../components/Carousel-compound/SimpleSlider.module.scss';
-import Location from './Sections/Location/Location';
+import Contacts from './Sections/Contacts/Contacts';
+import BestProducts from '../HomePage/Sections/BestProducts/BestProducts';
+import SliderSection from './Sections/Slider/Slider';
+
 
 const HomePage = () => {
     const matches = useMediaQuery({query: '(min-width: 768px)'});
@@ -15,38 +16,10 @@ const HomePage = () => {
         <>
             {matches ? <MainDestop /> : <MainMobile />}
             <PromotionalProducts />
-{/* 
-            <CarouselCompound>
-                <CarouselCompound.Page>
-                    <div className={styles.page}>
-                        <p className="validity-period">*Акция действует до 04/09/22</p>
-                        <h3 className={styles.title}>Название Акции 1</h3>
-                        <p className={styles.text}>Условия акции в пару строк, Условия акции в пару строк, Условия акции в пару строк</p>
-                        <button className={`${styles.button} ${"button"}`} type="button">ПРИНЯТЬ УЧАСТИЕ</button>
-                    </div>
-                </CarouselCompound.Page>
-
-                <CarouselCompound.Page>
-                    <div className={styles.page}>
-                        <p >*Акция действует до 04/09/22</p>
-                        <h3 className={styles.title}>Название Акции 2</h3>
-                        <p className={styles.text}>Условия акции в пару строк, Условия акции в пару строк, Условия акции в пару строк</p>
-                        <button className={`${styles.button} ${"button"}`} type="button">ПРИНЯТЬ УЧАСТИЕ</button>
-                    </div>
-                </CarouselCompound.Page>
-
-                <CarouselCompound.Page>
-                    <div className={styles.page}>
-                        <p className="slider__validity">*Акция действует до 04/09/22</p>
-                        <h3 className={styles.title}>Название Акции 3</h3>
-                        <p className={styles.text}>Условия акции в пару строк, Условия акции в пару строк, Условия акции в пару строк</p>
-                        <button className={`${styles.button} ${"button"}`} type="button">ПРИНЯТЬ УЧАСТИЕ</button>
-                    </div>
-                </CarouselCompound.Page>
-            </CarouselCompound> */}
-
             <ProductCategories />
-            <Location />
+            <SliderSection />
+            <BestProducts />
+            <Contacts />
         </>
     );
 };

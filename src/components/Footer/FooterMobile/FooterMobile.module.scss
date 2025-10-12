@@ -1,16 +1,13 @@
 .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
 }
 
-.logo {
-    max-width: 97px;
-}
-
-.price-list-button {
-    max-width: 149px;
-    padding: 12px 0;
+.priceListButton {
+    width: 149px;
+    padding: 12px;
 
     svg {
         margin-left: 12px;
@@ -25,7 +22,7 @@
     margin: 15px auto;
 }
 
-.email-input-label {
+.emailInputLabel {
     display: inline-block;
     font-weight: 400;
     font-size: 12px;
@@ -34,7 +31,7 @@
     color: #FFFFFF;
 }
 
-.email-input {
+.emailSubscription {
     margin-bottom: 30px;
 }
 
@@ -53,6 +50,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 25px;
     margin-bottom: 25px;
 
     &__item>a {
@@ -61,6 +59,7 @@
         font-size: 12px;
         line-height: 150%;
         color: #ffffffb3;
+
         &:not(:last-child) {
             margin-bottom: 20px;
         }
@@ -109,7 +108,7 @@
 .email {
     font-size: 14px;
     line-height: 130%;
-    
+
     &>a {
         font-weight: 600;
         color: #FFFFFF;
@@ -123,14 +122,14 @@
 
 .messengers {
     max-width: 100px;
-    
+
     &>p {
         font-weight: 100;
         font-size: 14px;
         color: #FFFFFF;
         margin-bottom: 17px;
     }
-    
+
     &__types {
         display: flex;
         gap: 10px;
@@ -154,7 +153,7 @@
     background-color: #40B3E0;
 }
 
-.bank-cards {
+.bankCards {
     margin-top: 10px;
     display: flex;
     gap: 5px;

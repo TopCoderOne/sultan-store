@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import styles from './productList.module.scss';
 import Card from '../Card/Card';
-import data from "../../../public/data.json";
+import database from "../../../public/database.json";
 
 const ProductList = () => {
     // const [data, setData] = useState([]);
@@ -38,7 +38,7 @@ const ProductList = () => {
     return (
         <section className={styles.productsList}>
             {
-                data.productsList.map((item, index) => (
+                database.products.map((item, index) => (
                     <Card item={item} key={index} />
                 ))
             }

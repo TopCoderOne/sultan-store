@@ -1,11 +1,10 @@
-import { FC } from 'react';
-import Download from '../../../public/icons/download.svg';
+import DownloadIcon from '../../../public/icons/download.svg';
 
-const PriceListButton: FC<IGlobalStyles> = ({ className }) => {
+const PriceListButton = ({ className }: IGlobalStyles) => {
     return (
         <a className={`${className}`}>
             Прайс-лист
-            <Download />
+            <DownloadIcon />
         </a>
     );
 }

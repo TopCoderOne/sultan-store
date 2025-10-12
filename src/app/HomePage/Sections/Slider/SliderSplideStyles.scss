@@ -1,0 +1,49 @@
+.slider .splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  pointer-events: auto;
+  width: auto !important;
+
+  &:not(:last-child) {
+    margin-right: 6px !important;
+  }
+}
+
+.slider .splide__pagination__page {
+  background: rgba(63, 78, 101, 1) !important;
+  width: 16px !important;
+  height: 5px !important;
+  opacity: 0.1 !important;
+  border-radius: 100px !important;
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
+
+  &.is-active {
+    background: #ffffff !important;
+    opacity: 1 !important;
+    width: 20px !important;
+  }
+}
+
+.slider .splide__arrows>button {
+  background-color: rgba(255, 255, 255, 1) !important;
+  width: 67px !important;
+  height: 67px !important;
+  border-radius: 1000px !important;
+  opacity: 1;
+
+  &>svg {
+    width: 9px;
+    height: 16px;
+    margin: 0 auto;
+  }
+}
+
+.slider .splide__arrows>.splide__arrow--prev {
+  left: -2.4%;
+}
+
+.slider .splide__arrows>.splide__arrow--next {
+  right: -2.4%;
+}

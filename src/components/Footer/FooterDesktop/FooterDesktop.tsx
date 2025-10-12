@@ -1,32 +1,35 @@
 import Link from 'next/link';
-import PriceListButton from '../../PriceListButton/PriceListButton';
+import Input from '@/components/Input/Input';
 import styles from './FooterDesktop.module.scss';
-import global from '@/styles/global.module.scss';
-import InputArrowRight from '../../../../public/icons/input-chevron-right.svg';
+import SultanLogo from '../../../../public/sultan-logo.svg';
+import PriceListButton from '../../PriceListButton/PriceListButton';
+import InputArrow from '../../../../public/icons/input-chevron-right.svg';
 import WhatsApp from '../../../../public/icons/whatsApp.svg';
 import Telegram from '../../../../public/icons/telegram.svg';
 import Visa from '../../../../public/icons/visa.svg';
 import MasterCard from '../../../../public/icons/master-card.svg';
-import Image from 'next/image';
 
 
 const FooterDesktop = () => {
     return (
         <div className={styles.content}>
-            <div className={styles.footer__col}>
-                <Image className={styles.logo} src="/images/footer/sultan-logo.png" width={156} height={66} alt="Султан" />
+            <div>
+                <Link className={styles.logo} href="/">
+                    <SultanLogo role="img" aria-label="Султан" />
+                </Link>
                 <p className={styles.description}>
-                    Компания «Султан» — снабжаем розничные магазины товарами &quot;под ключ&quot; в Кокчетаве
-                    и Акмолинской области
+                    Компания &laquo;Султан&raquo;&nbsp;&mdash; снабжаем розничные магазины товарами &quot;под&nbsp;ключ&quot; в&nbsp;Кокчетаве и&nbsp;Акмолинской области
                 </p>
-
-                <label className={styles["email-input-label"]} htmlFor="email-input">Подпишись на скидки и акции</label>
-                <div className={`${styles} ${global["main-input-style"]}`}>
-                    <input id="email-input" type="email" placeholder="Введите ваш E-mail" />
-                    <button type="submit" title="Отправить">
-                        <InputArrowRight />
-                    </button>
-                </div>
+                <label className={styles.emailInputLabel} htmlFor="email-subscription">Подпишись на скидки и акции</label>
+                <Input
+                    id="email-subscription"
+                    className="main-input-style"
+                    type="email"
+                    name="email-subscription"
+                    placeholder="Введите ваш E-mail"
+                    buttonType="submit"
+                    buttonTitle="Отправить email"
+                    buttonIcon={InputArrow} />
             </div>
             <div className={styles.links}>
                 <h3>Меню сайта:</h3>
@@ -45,18 +48,18 @@ const FooterDesktop = () => {
             </div>
             <div className={styles.messengers}>
                 <h3>Скачать прайс-лист:</h3>
-                <PriceListButton className={`${styles["price-list-button"]} ${global["main-button-style"]}`} />
+                <PriceListButton className={`${styles.priceListButton} main-button-style`} />
                 <p>Связь в мессенджерах:</p>
                 <div className={styles.messengers__types}>
                     <div className={styles.whatsApp}>
-                        <a href="https://web.whatsapp.com/" title="WhatsApp">
+                        <Link href="https://web.whatsapp.com/" title="WhatsApp">
                             <WhatsApp />
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.telegram}>
-                        <a href="https://web.telegram.org/a/" title="Telegram">
+                        <Link href="https://web.telegram.org/a/" title="Telegram">
                             <Telegram />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -65,18 +68,18 @@ const FooterDesktop = () => {
                 <div className={styles.phone}>
                     <p>+7 (777) 490-00-91</p>
                     <p>время работы: 9:00-20:00</p>
-                    <a href="tel:+77774900091">Заказать звонок</a>
+                    <Link href="tel:+77774900091">Заказать звонок</Link>
                 </div>
                 <div className={styles.email}>
-                    <a
+                    <Link
                         href="mailto:oat.sultan@mail.ru&&cc=oat.sultan@mail.ru?"
                         target="_blank"
                         rel="noreferrer">
                         oat.sultan@mail.ru
-                    </a>
+                    </Link>
                     <p>На связи в любое время</p>
                 </div>
-                <div className={styles["bank-cards"]}>
+                <div className={styles.bankCards}>
                     <Visa />
                     <MasterCard />
                 </div>

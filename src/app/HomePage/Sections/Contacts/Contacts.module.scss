@@ -1,0 +1,149 @@
+.contacts {
+    padding-bottom: 100px;
+
+    @media screen and (max-width: 600px) {
+        padding-bottom: 50px;
+    }
+}
+
+.contacts__wrapper {
+    position: relative;
+}
+
+.contacts__info {
+    max-width: 735px;
+    padding: 60px 50px;
+    border-radius: 8px;
+    color: rgba(63, 78, 101, 1);
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    right: 40px;
+    margin-right: auto;
+    z-index: 10000;
+
+    @media screen and (max-width: 600px) {
+        padding: 20px 15px;
+        top: 20px;
+    }
+
+    &>h2 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 120%;
+        margin-bottom: 15px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.contacts__infoWrapper {
+    &>p {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 120%;
+        margin-bottom: 25px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.contacts__infoDetails {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @media screen and (max-width: 600px) {
+        gap: 10px;
+    }
+}
+
+.address,
+.salesDepartment,
+.taxpayerData {
+    &:not(:last-child) {
+        border-bottom: 1px dashed rgba(63, 78, 101, 0.2);
+        padding-bottom: 25px;
+
+        @media screen and (max-width: 600px) {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.address__title,
+.salesDepartment__title,
+.taxpayerData__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: rgba(17, 17, 17, 1);
+    margin-bottom: 10px;
+    padding-left: 30px;
+
+    @media screen and (max-width: 600px) {
+        margin-bottom: 5px;
+        padding-left: 0;
+    }
+}
+
+.salesDepartment {
+    padding-left: 30px;
+
+    @media screen and (max-width: 600px) {
+        padding-left: 0;
+    }
+
+    &__title {
+        padding-left: 0;
+    }
+}
+
+.address__wrapper,
+.salesDepartment__wrapper,
+.taxpayerData__wrapper {
+    display: flex;
+    align-items: center;
+
+    &>svg {
+        margin-right: 10px;
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+}
+
+.address__info,
+.salesDepartment__info,
+.taxpayerData__info {
+    max-width: 237px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 12px;
+    }
+
+    &>span {
+        display: block;
+    }
+}
+
+.salesDepartment__info>a {
+    display: block;
+    font-weight: 400;
+    color: rgba(63, 78, 101, 1);
+}
+
+.contacts__map>iframe {
+    border-radius: 10px;
+}

@@ -1,50 +1,49 @@
+import Image from 'next/image';
 import styles from './ProductCategories.module.scss';
-import global from '@/styles/global.module.scss';
+import Link from 'next/link';
 
-function ProductCategories () {
-    return(
-            <section className={global.section}>
-                <div className={global.container}>
-                    <div className={global.section__header}>
-                        <h2 className={global.section__title}><span>категории</span> товаров</h2>
-                        <p className={global.section__text}>10 000+ ходовых позиций по спецмальным ценам</p>
-                    </div>
-
-                    <div className={styles.categories}>
-                        <a className={styles.categories__item} href="">
-                            <div className={styles["img-wrapper"]}>
-                                <img src="/images/product-category/image-1.png" alt="Бытовая химия" />
-                            </div>
-                            <p>Бытовая химия</p>
-                        </a>
-                        <a className={styles.categories__item} href="">
-                            <div className={styles["img-wrapper"]}>
-                                <img src="/images/product-category/image-2.png" alt="Косметика и гигиена" />
-                            </div>
-                            <p>Косметика и гигиена</p>
-                        </a>
-                        <a className={styles.categories__item} href="">
-                            <div className={styles["img-wrapper"]}>
-                                <img src="/images/product-category/image-3.png" alt="Товары для дома" />
-                            </div>
-                            <p>Товары для дома</p>
-                        </a>
-                        <a className={styles.categories__item} href="">
-                            <div className={styles["img-wrapper"]}>
-                                <img src="/images/product-category/image-4.png" alt="Товары для детей и мам" />
-                            </div>
-                            <p>Товары для детей и мам</p>
-                        </a>
-                        <a className={styles.categories__item} href="">
-                            <div className={styles["img-wrapper"]}>
-                                <img src="/images/product-category/image-5.png" alt="Посуда" />
-                                <img src="/images/product-category/image-5.png" alt="Посуда" />
-                            </div>
-                            <p>Посуда</p>
-                        </a>
-                    </div>
+const ProductCategories = () => {
+    return (
+        <section className="section">
+            <div className="container">
+                <div className="section__header">
+                    <h2 className="section__title"><span>Категории</span> товаров</h2>
+                    <p className="section__text">10&nbsp;000+ ходовых позиций по&nbsp;спецмальным ценам</p>
                 </div>
-            </section>
+                <div className={styles.categories}>
+                    <Link href="#">
+                        <figure className={styles.categories__item}>
+                            <Image width={250} height={250} loading="lazy" src="/images/product-category/household-chemicals.png" alt="Бытовая химия" />
+                            <figcaption>Бытовая химия</figcaption>
+                        </figure>
+                    </Link>
+                    <Link href="#">
+                        <figure className={styles.categories__item}>
+                            <Image width={250} height={250} loading="lazy" src="/images/product-category/cosmetics-and-hygiene.png" alt="Косметика и гигиена" />
+                            <figcaption>Косметика и&nbsp;гигиена</figcaption>
+                        </figure>
+                    </Link>
+                    <Link href="#">
+                        <figure className={styles.categories__item}>
+                            <Image width={250} height={250} loading="lazy" src="/images/product-category/household-goods.png" alt="Товары для дома" />
+                            <figcaption>Товары для дома</figcaption>
+                        </figure>
+                    </Link>
+                    <Link href="#">
+                        <figure className={styles.categories__item}>
+                            <Image width={250} height={250} loading="lazy" src="/images/product-category/products-for-children-and-mothers.png" alt="Товары для детей и мам" />
+                            <figcaption>Товары для детей&nbsp;и&nbsp;мам</figcaption>
+                        </figure>
+                    </Link>
+                    <Link href="#">
+                        <figure className={styles.categories__item}>
+                            <Image width={250} height={250} loading="lazy" src="/images/product-category/dishes.png" alt="Посуда" />
+                            <figcaption>Посуда</figcaption>
+                        </figure>
+                    </Link>
+                </div>
+            </div>
+        </section>
     );
 }
 

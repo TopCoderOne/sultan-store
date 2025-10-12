@@ -40,7 +40,6 @@ const HeaderDesktop = () => {
                             type="email"
                             name="search"
                             placeholder="Поиск..."
-                            inputBackground={global["input-bg-light-gray"]}
                             buttonType="submit"
                             buttonTitle="Отправить" />
 

@@ -2,12 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: #FFFFFF;
-    // background-color: #EDEDED;
     border-radius: 36px;
     padding: 13px 10px 13px 20px;
 
     &>input {
+        width: 100%;
         font-weight: 700;
         font-size: 15px;
         color: #5C6370;
@@ -21,8 +20,8 @@
     }
 
     &>button {
-        width: 39px;
-        height: 39px;
+        min-width: 39px;
+        min-height: 39px;
         background-color: #ffc85e;
         border-radius: 50%;
         cursor: pointer;

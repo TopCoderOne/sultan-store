@@ -1,0 +1,290 @@
+{
+    "manufacturers": [
+        "Grifon",
+        "Boyscout",
+        "Paclan"
+    ],
+    "brands": [
+        "Nivea",
+        "GRIFON",
+        "Домашний сундук",
+        "HELP"
+    ],
+    "productType": [
+        {
+            "title": "Уход за телом",
+            "options": [
+                "Эпиляция и депиляция",
+                "Средства для ванны и душа",
+                "Скрабы, пилинги и пр.",
+                "Мочалки и губки для тела",
+                "Кремы, лосьоны, масла",
+                "Интимный уход",
+                "Дезодоранты, антиперспиранты",
+                "Гели для душа"
+            ]
+        },
+        {
+            "title": "Уход за руками",
+            "options": [
+                "Увлажнение и питание",
+                "Средства для ногтей",
+                "Мыло твердое",
+                "Мыло жидкое",
+                "Крем для рук",
+                "Защита рук",
+                "Жидкость для снятия лака"
+            ]
+        },
+        {
+            "title": "Уход за ногами",
+            "options": [
+                "Скрабы, пилинги",
+                "Пилки, ролики",
+                "Крем для ног",
+                "Дезодоранты для ног"
+            ]
+        },
+        {
+            "title": "Уход за лицом",
+            "options": [
+                "Тональные средства",
+                "Средства для снятия макияжа",
+                "Средства для очищения",
+                "Маски, скрабы, сыворотки",
+                "Крем для лица",
+                "Крем для век",
+                "Жидкость для снятия макияжа",
+                "Гигиеническая помада"
+            ]
+        },
+        {
+            "title": "Уход за волосами",
+            "options": [
+                "Шампуни",
+                "Средства для укладки",
+                "Средства для окрашивания волос",
+                "Маски, сыворотки, масла",
+                "Кондиционеры, бальзамы"
+            ]
+        },
+        {
+            "title": "Средства для загара",
+            "options": [
+                "Средства после загара"
+            ]
+        },
+        {
+            "title": "Средства для бритья",
+            "options": [
+                "Станки и кассеты",
+                "После бритья",
+                "Для бритья"
+            ]
+        },
+        {
+            "title": "Подарочные наборы",
+            "options": [
+                "Для мужчин",
+                "Для женщин"
+            ]
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 2,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 3,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 4,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 5,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 6,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 7,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 8,
+            "popular": true,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 9,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 10,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 11,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 12,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 13,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 14,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        },
+        {
+            "id": 15,
+            "popular": false,
+            "image": "https://plastikko.ru/i/1/1/5536.jpg",
+            "quantity": "450",
+            "unit": "мл",
+            "name": "Ср-во для мытья посуды Апельсин+мята",
+            "barcode": "4604049097548",
+            "manufacturer": "Нэфис",
+            "brand": "AOS",
+            "price": "48,76",
+            "currency": "₸"
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 import styles from './Card.module.scss';
-import Image from 'next/image';
+// import Image from 'next/image';
+import Bottle from "../../../public/icons/bottle.svg";
 import BasketWhite from "../../../public/icons/basket-white.svg";
 
 interface CardProps {
@@ -9,13 +10,16 @@ interface CardProps {
 const Card = ({ item }: CardProps) => {
     return (
         <div className={styles.card}>
-            <div className={styles.card__label}>
+            <div className={`${styles.card__label} ${item.popular ? styles.show : ''}`}>
                 ПОПУЛЯРНОЕ
             </div>
             <div className={styles.card__img}>
-                <img src={item.image} alt={item.name} loading="lazy" />
+                {/* <Image fill src={item.image} alt={item.name} loading="lazy" /> */}
+                <img width={202} height={194} src={item.image} alt={item.name} loading="lazy" />
             </div>
-            {/* <Image className={styles.card__img} src={item.image} alt={item.name} /> */}
+            <p className={styles.card__unit}>
+                <Bottle />{item.quantity}&nbsp;{item.unit}
+            </p>
             <p className={styles.card__header}>
                 <span>{item.brand}</span> {item.name}
             </p>
@@ -27,8 +31,7 @@ const Card = ({ item }: CardProps) => {
             <div className={styles.card__footer}>
                 <p>{item.price} {item.currency}</p>
                 <button className={styles.card__button}>
-                    <span>В КОРЗИНУ</span>
-                    <BasketWhite />
+                    <span>В КОРЗИНУ</span><BasketWhite />
                 </button>
             </div>
         </div>
