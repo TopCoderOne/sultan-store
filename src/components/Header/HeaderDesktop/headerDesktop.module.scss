@@ -20,6 +20,10 @@
 
 .logo {
     max-width: 156px;
+    
+    path {
+        fill: rgba(63, 78, 101, 1);
+    }
 }
 
 .catalog-button {
@@ -95,11 +99,14 @@
             height: 8px;
             background-color: #1FD85D;
             border-radius: 50%;
-            animation: online 1.5s ease-in-out infinite;
+            animation: online 1.5s ease-in-out infinite alternate;
 
             @keyframes online {
+                from {
+                    box-shadow: 0 0 1px 3px rgb(255, 255, 255);
+                }
                 to {
-                    box-shadow:  0 0 1px 3px rgba(31, 216, 93, 0.5);
+                    box-shadow: 0 0 1px 3px rgba(31, 216, 93, 0.5);
                 }
             }
         }

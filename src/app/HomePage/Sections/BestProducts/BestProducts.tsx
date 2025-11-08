@@ -30,8 +30,9 @@ const BestProducts = () => {
                         rewind: true,
                         width: 1440,
                         fixedWidth: 1440,
+                        interval: 10000,
                         pagination: true,
-                        speed: 500,
+                        speed: 9000,
                         autoplay: true,
                         gap: 10,
                     }}

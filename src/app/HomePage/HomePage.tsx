@@ -5,17 +5,17 @@ import ProductCategories from './Sections/ProductCategories/ProductCategories';
 import PromotionalProducts from './Sections/PromotionalProducts/PromotionalProducts';
 import { useMediaQuery } from 'react-responsive';
 import Contacts from './Sections/Contacts/Contacts';
-import BestProducts from '../HomePage/Sections/BestProducts/BestProducts';
+import BestProducts from './Sections/BestProducts/BestProducts';
 import SliderSection from './Sections/Slider/Slider';
 
 
 const HomePage = () => {
-    const matches = useMediaQuery({query: '(min-width: 768px)'});
+    const matches = useMediaQuery({query: '(min-width: 1024px)'});
 
     return (
         <>
             {matches ? <MainDestop /> : <MainMobile />}
-            <PromotionalProducts />
+            {/* <PromotionalProducts /> */}
             <ProductCategories />
             <SliderSection />
             <BestProducts />

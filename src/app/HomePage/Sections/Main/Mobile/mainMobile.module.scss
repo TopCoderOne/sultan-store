@@ -1,41 +1,65 @@
 .main {
-    width: 100vw;
-    height: 100%;
-    background: url('../../../../../../public/images/image\ 19.jpg') no-repeat;
+    padding-bottom: 50px;
+}
+
+.main__wrapper {
+    width: 100%;
+    height: 500px;
+    background: #8A94AB url('/images/homepage/main-section/bg-image.jpg') no-repeat;
     background-size: 100% 100%;
-    padding: 55px 0;
-    margin-bottom: 50px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+        height: 100%;
+    }
 }
 
 .main__content {
     background: linear-gradient(100deg, rgba(138, 148, 171, 0.9) 0%, rgba(138, 148, 171, 0) 100%);
-    padding: 17px;
     backdrop-filter: blur(3px);
+    padding: 40px;
+
+    @media screen and (max-width: 600px) {
+        padding: 17px;
+        max-width: 290px;
+    }
 }
 
 .main__title {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 30px;
     color: #FFFFFF;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 }
 
 .main__text {
     font-weight: 500;
-    font-size: 10px;
+    font-size: 18px;
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
+
+    @media screen and (max-width: 600px) {
+        font-size: 10px;
+    }
 }
 
-.profitable-offer {
+.advantage {
     display: flex;
+    flex-direction: column;
     gap: 10px 35px;
-
-    @media screen and (max-width: 500px) {
-        flex-direction: column;
-    }
 
     &__item {
         display: flex;
@@ -46,9 +70,13 @@
         &>p {
             width: 100%;
             font-weight: 400px;
-            font-size: 10px;
+            font-size: 15px;
             color: #3F4E65;
             line-height: 21px;
+
+            @media screen and (max-width: 600px) {
+                font-size: 10px;
+            }
 
             &>span {
                 font-weight: 700;
@@ -58,17 +86,22 @@
     }
 
     &__plus {
-        width: 18px;
-        height: 18px;
+        display: block;
+        width: 33px;
+        height: 30px;
         font-weight: 700;
-        font-size: 10px;
-        text-align: center;
-        line-height: 18px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: #ffc85e;
         border-radius: 50%;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+
+        @media screen and (max-width: 600px) {
+            width: 18px;
+            height: 18px;
+            font-size: 10px;
+        }
     }
 }

@@ -1,8 +1,8 @@
-import styles from "./basketPage.module.scss";
-import Image from "next/image";
-import global from "../../styles/global.module.scss";
-import DeleteIcon from "../../../public/icons/fluent_delete-16-filled.svg";
-import Im from "../../../public/images/image-21.png";
+import styles from './BasketPage.module.scss';
+import Image from 'next/image';
+import global from '../../styles/global.module.scss';
+import DeleteIcon from '../../../public/icons/fluent_delete-16-filled.svg';
+import Im from '/public/images/image-21.png';
 
 const BasketPage = () => {
     return (
