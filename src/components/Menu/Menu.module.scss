@@ -1,14 +1,18 @@
 .menu {
     padding: 14px 0;
-    @media screen and (max-width: 700px) {
-        // display: none;
-        padding: 20px 0;
-        // transform: translateY(-300%);
-        // transition: all 2s linear;
-    }
+    background-color: #ffffff;
 
-    // &.active {
-    //     display: block;
-    //     transform: translateY(0);
-    // }
+    @media screen and (max-width: 1024px) {
+        padding: 20px 0;
+        transition: top .5s linear;
+        position: absolute;
+        top: -100%;
+        right: 0;
+        left: 0;
+        z-index: 100;
+
+        &.active {
+            top: 15.2%;
+        }
+    }
 }

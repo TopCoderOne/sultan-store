@@ -6,9 +6,9 @@ import Menu from '../../Menu/Menu';
 import PriceListButton from '../../PriceListButton/PriceListButton';
 import Input from '@/components/Input/Input';
 import BasketItem from '../../BasketItem/BasketItem';
-import Cubes from "../../../../public/icons/cubes.svg";
+import CatalogIcon from "../../../../public/icons/cubes.svg";
 import SultanLogo from '../../../../public/icons/sultan-logo/sultan-logo.svg';
-import MagnifyingGlass from "../../../../public/icons/magnifying-glass.svg"
+import SearchIcon from "../../../../public/icons/magnifying-glass.svg"
 
 const HeaderDesktop = () => {
     return (
@@ -22,18 +22,17 @@ const HeaderDesktop = () => {
                         <Link href="/">
                             <SultanLogo width="156" height="66" className={styles.logo} role="img" aria-label="Султан" />
                         </Link>
-                        <button
-                            className={`${styles["catalog-button"]} main-button-style`}
-                            type="button">
-                            Каталог
-                            <Cubes />
-                        </button>
+                        <Link className={styles.catalogLink} href="/CatalogPage">
+                            <button className={`${styles["catalog-button"]} main-button-style`} type="button">
+                                Каталог <CatalogIcon />
+                            </button>
+                        </Link>
                         <Input
                             type="email"
                             name="search"
                             placeholder="Поиск..."
                             className={"input-bg-light-gray"}
-                            buttonIcon={MagnifyingGlass}
+                            buttonIcon={SearchIcon}
                             buttonType="submit"
                             buttonTitle="Отправить"
                         />

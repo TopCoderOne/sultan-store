@@ -1,6 +1,6 @@
 'use client'
 import Card from '@/components/Card/Card';
-import styles from './PromotionalProducts.module.scss';
+// import styles from './PromotionalProducts.module.scss';
 import './SliderSplideStyles.scss';
 import database from '../../../../../public/database.json';
 import { Splide, SplideSlide, SplideTrack } from '../../../../../node_modules/@splidejs/react-splide';

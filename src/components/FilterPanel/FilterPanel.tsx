@@ -2,18 +2,18 @@ import Input from "../Input/Input";
 import styles from "./FilterPanel.module.scss";
 import database from "../../../public/database.json"
 import Image from 'next/image';
-import AirWick from "../../../public/images/logos/AirWick-logo.png";
-import CamayFrance from "../../../public/images/logos/CamayFrance-logo.png";
-import CottonClub from "../../../public/images/logos/CottonClub-logo.png";
-import Colgate from "../../../public/images/logos/Colgate-logo.png";
-import Johnsons from "../../../public/images/logos/Johnsons-logo.png";
-import MasterFresh from "../../../public/images/logos/MasterFresh-logo.png";
-import NC from "../../../public/images/logos/NC-logo.png";
-import NEFIS from "../../../public/images/logos/NEFIS-logo.png";
-import Nivea from "../../../public/images/logos/Nivea-logo.png";
-import Siberian from "../../../public/images/logos/Siberian-logo.png";
+import AirWick from '../../../public/images/brand-logo/AirWick-logo.png';
+import CamayFrance from '../../../public/images/brand-logo/CamayFrance-logo.png';
+import CottonClub from '../../../public/images/brand-logo/CottonClub-logo.png';
+import Colgate from '../../../public/images/brand-logo/Colgate-logo.png';
+import Johnsons from '../../../public/images/brand-logo/Johnsons-logo.png';
+import MasterFresh from '../../../public/images/brand-logo/MasterFresh-logo.png';
+import NC from '../../../public/images/brand-logo/NC-logo.png';
+import NEFIS from '../../../public/images/brand-logo/NEFIS-logo.png';
+import Nivea from '../../../public/images/brand-logo/Nivea-logo.png';
+import Siberian from '../../../public/images/brand-logo/Siberian-logo.png';
 import SearchIcon from "../../../public/icons/magnifying-glass.svg";
-import TrashCanIcon from "../../../public/icons/fluent_delete-16-filled.svg";
+import TrashCanIcon from "/public/icons/fluent_delete-16-filled.svg";
 
 const FilterPanel = () => {
     return (
