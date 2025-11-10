@@ -10,11 +10,11 @@ interface IMenuProps {
 
 const Menu = ({ isOpen }: IMenuProps) => {
     const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
-    const MenuBody = isMobile ? <MenuMobile /> : <MenuDesktop />
+    const content = isMobile ? <MenuMobile /> : <MenuDesktop />
     return (
         <div className={`${styles.menu} ${isOpen ? styles.active : null}`}>
             <div className="container">
-                {MenuBody}
+                {content}
             </div>
         </div>
     );

@@ -1,0 +1,45 @@
+.mobileBackButton {
+    padding: 20px 0 25px;
+
+    &>a {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 14px;
+        margin-right: 14px;
+        text-align: center;
+        background-color: rgba(255, 202, 101, 0.3);
+        width: 49px;
+        height: 49px;
+        border-radius: 100px;
+
+        &>svg {
+            width: 10px;
+            height: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            padding-top: 5px;
+            margin-right: 5px;
+            width: 32px;
+            height: 32px;
+
+            &>svg {
+                width: 6px;
+                height: 9px;
+            }
+        }
+    }
+
+    &>span {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 120%;
+        letter-spacing: 14%;
+        text-transform: uppercase;
+        color: rgba(63, 78, 101, 1);
+
+        @media screen and (max-width: 600px) {
+            font-size: 10px;
+        }
+    }
+}

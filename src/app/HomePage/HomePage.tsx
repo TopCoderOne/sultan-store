@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import MainDestop from './Sections/Main/Desktop/MainDesktop';
 import MainMobile from './Sections/Main/Mobile/MainMobile';
 import ProductCategories from './Sections/ProductCategories/ProductCategories';
@@ -10,12 +10,12 @@ import SliderSection from './Sections/Slider/Slider';
 
 
 const HomePage = () => {
-    const matches = useMediaQuery({query: '(min-width: 1024px)'});
+    const isMobile = useMediaQuery({query: '(max-width: 1024px)'});
 
     return (
         <>
-            {matches ? <MainDestop /> : <MainMobile />}
-            {/* <PromotionalProducts /> */}
+            {isMobile ? <MainMobile /> : <MainDestop />}
+            <PromotionalProducts />
             <ProductCategories />
             <SliderSection />
             <BestProducts />

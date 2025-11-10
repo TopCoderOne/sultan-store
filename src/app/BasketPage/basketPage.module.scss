@@ -88,6 +88,7 @@
     }
 
     &__info {
+        width: 100%;
         max-width: 480px;
 
         @media screen and (max-width: 600px) {
@@ -148,7 +149,7 @@
 
         .decrementButton,
         .incrementButton {
-            background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+            background-color: rgba(255, 202, 101, 0.3);
             font-weight: 300;
             font-size: 12px;
             line-height: 100%;

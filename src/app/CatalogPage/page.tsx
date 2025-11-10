@@ -1,8 +1,11 @@
-import styles from "./СatalogPage.module.scss";
-import database from "../../../public/database.json"
-import FilterPanel from "@/components/FilterPanel/FilterPanel";
-import ProductList from "@/components/ProductList/ProductList";
-import { Breadсrumbs } from "@/components/Breadсrumbs/Breadсrumbs";
+'use client';
+import styles from './СatalogPage.module.scss';
+import database from '../../../public/database.json';
+import FilterPanel from '@/components/FilterPanel/FilterPanel';
+import ProductList from '@/components/ProductList/ProductList';
+import { Breadсrumbs } from '@/components/Breadсrumbs/Breadсrumbs';
+import { useMediaQuery } from 'react-responsive';
+import { MobileBackButton } from '@/components/MobileBackButton/MobileBackButton';
 
 const breadcrumbs = [
     {
@@ -16,10 +19,15 @@ const breadcrumbs = [
 ];
 
 const CatalogPage = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
+
     return (
         <section className={styles.catalog}>
             <div className="container">
-                <Breadсrumbs items={breadcrumbs} />
+                {isMobile
+                    ? <MobileBackButton href={'/'} title="Назад" />
+                    : <Breadсrumbs items={breadcrumbs} />
+                }
                 <div className={styles.catalog__header}>
                     <h1 className={styles.catalog__title}>Косметика и гигиена</h1>
                     <div>

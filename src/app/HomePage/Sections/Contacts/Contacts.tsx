@@ -1,7 +1,7 @@
+import Link from 'next/link';
+import styles from './Contacts.module.scss';
 import LocationDot from '../../../../../public/icons/location-dot.svg';
 import FluentDocument from '../../../../../public/icons/fluent-document.svg';
-import styles from './Contacts.module.scss';
-import Link from 'next/link';
 
 const Contacts = () => {
     return (
