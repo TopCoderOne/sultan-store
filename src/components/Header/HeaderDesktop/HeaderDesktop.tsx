@@ -19,7 +19,7 @@ const HeaderDesktop = () => {
                 <div className="container">
                     <div className={styles.content}>
                         <Link href="/">
-                            <SultanLogo width="156" height="66" className={styles.logo} role="img" aria-label="Султан" />
+                            <SultanLogo className={styles.logo} role="img" aria-label="Султан" />
                         </Link>
                         <Link className={styles.catalogLink} href="/CatalogPage">
                             <button className={`${styles["catalog-button"]} main-button-style`} type="button">
